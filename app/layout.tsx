@@ -40,7 +40,7 @@ const scriptin = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Tide House Interiors",
+  title: "Ryne Estwing | Design Engineer",
   description:
     "Residential interior design studio creating thoughtful, functional homes tailored to your lifestyle—from concept through completion.",
 };

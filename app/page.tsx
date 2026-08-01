@@ -118,7 +118,7 @@ export default function Home() {
               />
             </div>
             <HeroTitle>Ryne Estwing</HeroTitle>
-            <HeroSecondaryTitle>Frontend Engineer</HeroSecondaryTitle>
+            <HeroSecondaryTitle>Design Engineer</HeroSecondaryTitle>
           </div>
           <div
             css={css`

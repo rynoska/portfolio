@@ -37,28 +37,6 @@ const Button = styled.button`
 `;
 ```
 
-## Contact form (Vercel-native)
-
-This project includes a secure contact endpoint at `app/api/contact/route.ts` and a client form in `app/src/components/contact/ContactForm.tsx`.
-
-### Required environment variables
-
-- `RESEND_API_KEY` - API key for Resend
-- `CONTACT_TO_EMAIL` - destination email address for contact submissions
-- `CONTACT_FROM_EMAIL` _(optional)_ - sender identity (defaults to `Tide House <onboarding@resend.dev>`)
-
-### Optional bot protection
-
-- `TURNSTILE_SECRET_KEY` - enables Cloudflare Turnstile server verification when provided
-- `NEXT_PUBLIC_TURNSTILE_SITE_KEY` - renders Turnstile widget on the contact form
-
-### Security checks included
-
-- Server-side input validation with `zod`
-- Honeypot field (`website`) spam trap
-- Minimum form completion-time check
-- Optional Turnstile verification
-
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More

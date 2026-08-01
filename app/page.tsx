@@ -169,7 +169,7 @@ export default function Home() {
                 <a href="https://new.artsmia.org" target="_blank" rel="noopener noreferrer">
                   Minneapolis Institute of Art
                 </a>
-                , The Uprising Creative , and{" "}
+                , The Uprising Creative, and{" "}
                 <a href="https://www.metrochicago.com" target="_blank" rel="noopener noreferrer">
                   Metro Chicago
                 </a>
@@ -425,6 +425,22 @@ export default function Home() {
                 </ChipList>
               </div>
             </DateSection>
+
+            <section
+              css={css`
+                max-width: 600px;
+                margin-left: auto;
+                margin-top: 4rem;
+              `}
+            >
+              <HeadingLink
+                href="/images/ryne-estwing-resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Full Resume <LinkExternal />
+              </HeadingLink>
+            </section>
           </div>
         </Container>
 

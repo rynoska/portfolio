@@ -433,11 +433,7 @@ export default function Home() {
                 margin-top: 4rem;
               `}
             >
-              <HeadingLink
-                href="/images/ryne-estwing-resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <HeadingLink href="/rle-resume.pdf" target="_blank" rel="noopener noreferrer">
                 Full Resume <LinkExternal />
               </HeadingLink>
             </section>

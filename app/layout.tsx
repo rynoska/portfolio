@@ -42,7 +42,7 @@ const scriptin = localFont({
 export const metadata: Metadata = {
   title: "Ryne Estwing | Design Engineer",
   description:
-    "Residential interior design studio creating thoughtful, functional homes tailored to your lifestyle—from concept through completion.",
+    "Design-minded engineer with 15+ years of experience building thoughtful digital experiences at the intersection of design systems, accessibility, and front-end development.",
 };
 
 export default function RootLayout({

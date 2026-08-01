@@ -37,8 +37,23 @@ const portfolioImageSources = [
   {
     src: "/posters/lcd-soundsystem.jpg",
   },
+  {
+    src: "/posters/dragonette.jpg",
+  },
+  { src: "/posters/david-bazan.jpg" },
 
   { src: "/posters/nada-surf.jpg" },
+  { src: "/posters/beach-house.jpg" },
+  { src: "/posters/promise-ring.jpg" },
+  { src: "/posters/toro-y-moi.jpg" },
+  { src: "/posters/tvotr.jpg" },
+  { src: "/posters/walk-the-moon.jpg" },
+  { src: "/posters/antlers-gold.jpg" },
+  { src: "/posters/cults.jpg" },
+  { src: "/posters/destroyer.jpg" },
+  { src: "/posters/sky-ferreira.jpg" },
+  { src: "/posters/swimm.jpg" },
+  { src: "/posters/the-dig.jpg" },
 ];
 
 export default function Portfolio() {

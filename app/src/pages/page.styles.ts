@@ -13,14 +13,14 @@ export const Container = styled.div`
     gap: 2rem;
   }
 
+  *::selection {
+    background: rgb(187, 245, 244);
+    color: rgb(5, 8, 11);
+  }
   p,
   time {
-    color: rgb(137, 172, 171);
+    color: rgb(151, 190, 189);
     font-size: 1.125rem;
-    &::selection {
-      background: rgb(187, 245, 244);
-      color: rgb(5, 8, 11);
-    }
   }
   p:first-of-type {
     margin-top: 0;

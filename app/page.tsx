@@ -6,120 +6,21 @@ import {
   DateSection,
   Heading3,
   HeadingLink,
-  HeroSecondaryTitle,
-  HeroTitle,
   MainShell,
   PageShell,
 } from "./src/pages/page.styles";
 import Footer from "./src/components/footer/Footer";
-import Image from "next/image";
 import { css } from "@emotion/react";
 import { LinkExternal } from "./src/components/icons/LinkExternal";
-import { theme } from "./src/theme/theme";
-
-const overlapImageWrapper = css`
-  position: relative;
-  width: 120px;
-  height: 126px;
-  margin-right: 0;
-  margin-left: auto;
-  @media (min-width: ${theme.breakpoints.sm}) {
-    width: 190px;
-    height: 200px;
-  }
-
-  img {
-    transition:
-      transform 1s cubic-bezier(0.56, 1, 0.36, 1),
-      opacity 2s ease;
-    will-change: transform;
-    width: auto;
-    height: 100%;
-    max-width: 100%;
-  }
-
-  &:hover {
-    img:nth-of-type(1) {
-      transform: translate(0px, 0px);
-      opacity: 0;
-    }
-    img:nth-of-type(2) {
-      transform: translate(0px, 0px);
-      opacity: 0;
-    }
-  }
-`;
-
-const baseImage = css`
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-`;
-
-const offsetImage = css`
-  position: absolute;
-  transform: translate(-40px, -10px);
-  opacity: 0.15;
-  z-index: 2;
-`;
-const offsetTwoImage = css`
-  position: absolute;
-  transform: translate(-20px, -5px);
-  opacity: 0.25;
-  z-index: 2;
-`;
+import HeroIntro from "./src/components/hero/HeroIntro";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <PageShell>
       <MainShell>
         <Container>
-          <div
-            css={css`
-              margin: 0 auto;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              align-self: flex-start;
-              @media (max-width: ${theme.breakpoints.sm}) {
-                margin-bottom: 2rem;
-              }
-              @media (min-width: ${theme.breakpoints.sm}) {
-                top: 6.5rem;
-                position: sticky;
-              }
-            `}
-          >
-            <div css={overlapImageWrapper}>
-              <Image
-                src="/images/rle-logo-cropped.svg"
-                alt="Ryne Estwing logo"
-                width={254}
-                height={267}
-                sizes="(max-width: 768px) 100vw, 254px"
-                css={offsetImage}
-              />
-              <Image
-                src="/images/rle-logo-cropped.svg"
-                alt="Ryne Estwing logo"
-                width={254}
-                height={267}
-                sizes="(max-width: 768px) 100vw, 254px"
-                css={offsetTwoImage}
-              />
-              <Image
-                src="/images/rle-logo-cropped.svg"
-                alt="Ryne Estwing logo"
-                width={254}
-                height={267}
-                sizes="(max-width: 768px) 100vw, 254px"
-                css={baseImage}
-              />
-            </div>
-            <HeroTitle>Ryne Estwing</HeroTitle>
-            <HeroSecondaryTitle>Design Engineer</HeroSecondaryTitle>
-          </div>
+          <HeroIntro />
           <div
             css={css`
               flex: 1;
@@ -412,7 +313,8 @@ export default function Home() {
                   Designed, developed and maintained both Metro and SmartBar music venues in
                   Chicago. Designed for clients including The Onion, Time Out, Pitchfork,
                   Anheuser-Busch, and Chicago Architecture Foundation. Project management for
-                  marketing and events. Designed and curated several silkscreen gig posters.
+                  marketing and events. Designed and curated several silkscreen{" "}
+                  <Link href="/posters">gig posters</Link>.
                 </p>
 
                 <ChipList>

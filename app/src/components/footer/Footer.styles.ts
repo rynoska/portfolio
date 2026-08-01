@@ -13,6 +13,21 @@ export const FooterInner = styled.div`
 `;
 
 export const FooterText = styled.p`
-  color: rgb(137, 172, 171);
-  font-size: 0.875rem;
+  color: ${({ theme }) => theme.colors.text.primary};
+  font-size: 0.75rem;
+`;
+
+export const SocialIconList = styled.ul`
+  color: ${({ theme }) => theme.colors.text.primary};
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li a {
+    transition: color 0.4s ease-in-out;
+    &:hover {
+      color: ${({ theme }) => theme.colors.text.linkHover};
+    }
+  }
 `;

@@ -12,6 +12,21 @@ const serviceImageFrameCss = css`
   width: 100%;
   height: auto;
   aspect-ratio: 18 / 24;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+`;
+
+const fadeInKeyframes = css`
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 `;
 
 // Add before/after pairs
@@ -52,6 +67,7 @@ export default function Portfolio() {
           <div
             css={css`
               flex: 1;
+              ${fadeInKeyframes}
               min-width: 0;
               max-width: 1200px;
               display: grid;
@@ -84,7 +100,13 @@ export default function Portfolio() {
             `}
           >
             {portfolioImageSources.map((item, index) => (
-              <div css={serviceImageFrameCss} key={`${item.src}-${index}`}>
+              <div
+                css={css`
+                  ${serviceImageFrameCss}
+                  animation-delay: ${index * 120}ms;
+                `}
+                key={`${item.src}-${index}`}
+              >
                 <button
                   type="button"
                   onClick={() => {

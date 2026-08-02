@@ -20,10 +20,13 @@ export const Container = styled.div`
   p,
   time {
     color: rgb(151, 190, 189);
-    font-size: 1.125rem;
   }
   p:first-of-type {
     margin-top: 0;
+  }
+
+  p {
+    line-height: 1.5;
   }
 
   a {
@@ -36,8 +39,13 @@ export const Container = styled.div`
     }
   }
   time {
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     margin-top: 0.15rem;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.sm}) {
+      margin-bottom: 0.75rem;
+      display: block;
+    }
   }
 `;
 
@@ -87,13 +95,19 @@ export const ChipList = styled.ul`
 `;
 
 export const DateSection = styled.section`
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
-  gap: 36px;
-  margin-left: auto;
   max-width: 820px;
   margin-top: 4rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 36px;
+    margin-left: auto;
+  }
+  p {
+    font-size: 0.875rem;
+  }
 `;
 
 export const HeadingLink = styled.a`

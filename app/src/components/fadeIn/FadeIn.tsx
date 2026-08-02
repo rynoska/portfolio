@@ -24,13 +24,29 @@ export function FadeIn({
   root = null,
   delay = 0,
   threshold = 0.1,
-  rootMargin = "0px 0px -80px 0px",
+  rootMargin = "0px 0px -10px 0px",
   wrapperCss,
 }: FadeInProps) {
   const [isVisible, setIsVisible] = useState(false);
+  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePreference = () => setPrefersReducedMotion(mediaQuery.matches);
+
+    updatePreference();
+    mediaQuery.addEventListener("change", updatePreference);
+
+    return () => mediaQuery.removeEventListener("change", updatePreference);
+  }, []);
+
+  useEffect(() => {
+    if (prefersReducedMotion) {
+      setIsVisible(true);
+      return;
+    }
+
     const el = ref.current;
     if (!el) return;
     const observer = new IntersectionObserver(
@@ -44,8 +60,10 @@ export function FadeIn({
     );
     observer.observe(el);
     return () => observer.disconnect();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [prefersReducedMotion, threshold, rootMargin, root]);
+
+  const shouldAnimate = !prefersReducedMotion;
+  const isShown = isVisible || prefersReducedMotion;
 
   return (
     <div
@@ -53,11 +71,11 @@ export function FadeIn({
       css={[
         wrapperCss,
         css`
-          opacity: ${isVisible ? 1 : 0};
-          transform: ${isVisible ? "translateY(0)" : "translateY(50px)"};
-          transition:
-            opacity 1s ease-in-out ${delay}ms,
-            transform 0.8s ease-in-out ${delay}ms;
+          opacity: ${isShown ? 1 : 0};
+          transform: ${isShown || !shouldAnimate ? "translateY(0)" : "translateY(1rem)"};
+          transition: ${shouldAnimate
+            ? `opacity 0.6s ease-in-out ${delay}ms, transform 0.6s ease-in-out ${delay}ms`
+            : "none"};
         `,
       ]}
     >

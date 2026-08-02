@@ -15,6 +15,7 @@ import { LinkExternal } from "./src/components/icons/LinkExternal";
 import HeroIntro from "./src/components/hero/HeroIntro";
 import Link from "next/link";
 import { theme } from "./src/theme/theme";
+import { FadeIn } from "./src/components/fadeIn/FadeIn";
 
 export default function Home() {
   return (
@@ -90,250 +91,260 @@ export default function Home() {
                 API to create an approachable way to view vinyl collections with your friends.
               </p>
             </section>
-            {/* Tock */}
-            <DateSection
-              css={css`
-                margin-top: 8rem;
-              `}
-            >
-              <time>2021 - Present</time>
-              <div
+            <FadeIn>
+              {/* Tock */}
+              <DateSection
                 css={css`
-                  max-width: 600px;
+                  margin-top: 8rem;
                 `}
               >
-                <Heading3
-                  css={css`
-                    margin-bottom: 0.5rem;
-                  `}
-                >
-                  Lead Web Developer - American Express
-                </Heading3>
+                <time>2021 - Present</time>
                 <div
                   css={css`
-                    font-family: ${theme.typography.fonts.sans};
-                    margin: 0 0 1rem;
-                    display: flex;
-                    align-items: center;
-                    gap: 0.5rem;
-                    a {
+                    max-width: 600px;
+                  `}
+                >
+                  <Heading3
+                    css={css`
+                      margin-bottom: 0.5rem;
+                    `}
+                  >
+                    Lead Web Developer - American Express
+                  </Heading3>
+                  <div
+                    css={css`
+                      font-family: ${theme.typography.fonts.sans};
+                      margin: 0 0 1rem;
                       display: flex;
                       align-items: center;
                       gap: 0.5rem;
-                    }
-                  `}
-                >
-                  <a href="https://www.resy.com/join" target="_blank" rel="noopener noreferrer">
-                    Resy <LinkExternal />
-                  </a>
-                  |{" "}
-                  <a
-                    href="https://www.exploretock.com/join"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Tock <LinkExternal />
-                  </a>
-                </div>
-                <p>
-                  Build and maintain web application experiences for online reservation software
-                  platforms Tock and Resy. Work closely with cross-functional teams, including
-                  designers, engineers, and stakeholders to implement web experiences and advocate
-                  for best practices in accessibility and closely follow design system standards.
-                </p>
-                <h4
-                  css={css`
-                    margin-bottom: 0.5rem;
-                  `}
-                >
-                  Featured work:
-                </h4>
-                <ul
-                  css={css`
-                    list-style: circle;
-                    margin-left: 0.8rem;
-                    li {
-                      padding: 0.25rem 0;
                       a {
                         display: flex;
                         align-items: center;
                         gap: 0.5rem;
                       }
-                    }
+                    `}
+                  >
+                    <a href="https://www.resy.com/join" target="_blank" rel="noopener noreferrer">
+                      Resy <LinkExternal />
+                    </a>
+                    |{" "}
+                    <a
+                      href="https://www.exploretock.com/join"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Tock <LinkExternal />
+                    </a>
+                  </div>
+                  <p>
+                    Build and maintain web application experiences for online reservation software
+                    platforms Tock and Resy. Work closely with cross-functional teams, including
+                    designers, engineers, and stakeholders to implement web experiences and advocate
+                    for best practices in accessibility and closely follow design system standards.
+                  </p>
+                  <h4
+                    css={css`
+                      margin-bottom: 0.5rem;
+                    `}
+                  >
+                    Featured work:
+                  </h4>
+                  <ul
+                    css={css`
+                      list-style: circle;
+                      margin-left: 0.8rem;
+                      li {
+                        padding: 0.25rem 0;
+                        a {
+                          display: flex;
+                          align-items: center;
+                          gap: 0.5rem;
+                        }
+                      }
+                    `}
+                  >
+                    <li>
+                      <a
+                        href="https://exploretock.com/join/make-it-an-experience"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Make it an experience <LinkExternal />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://exploretock.com/blog/tock-ten"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Tock 10 <LinkExternal />
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://exploretock.com/join/holiday-success"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Holiday Success <LinkExternal />
+                      </a>
+                    </li>
+                  </ul>
+                  <ChipList>
+                    <li>Javascript</li>
+                    <li>TypeScript</li>
+                    <li>HTML</li>
+                    <li>Emotion CSS</li>
+                    <li>React</li>
+                    <li>Next.js</li>
+                    <li>GraphQL</li>
+                    <li>WordPress</li>
+                    <li>Node.js</li>
+                    <li>PHP</li>
+                  </ChipList>
+                </div>
+              </DateSection>
+            </FadeIn>
+            <FadeIn>
+              <DateSection>
+                <time>2017 - 2021</time>
+                <div
+                  css={css`
+                    max-width: 600px;
                   `}
                 >
-                  <li>
-                    <a
-                      href="https://exploretock.com/join/make-it-an-experience"
+                  <Heading3>
+                    Frontend Engineer -{" "}
+                    <HeadingLink
+                      href="https://www.walgreens.com"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Make it an experience <LinkExternal />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://exploretock.com/blog/tock-ten"
+                      Walgreens <LinkExternal />
+                    </HeadingLink>
+                  </Heading3>
+                  <p>
+                    Built and maintained Walgreens design system and brand style guide. Built a
+                    responsive global header and marketing landing pages including interaction and
+                    animation design and execution.
+                  </p>
+
+                  <ChipList>
+                    <li>Javascript</li>
+                    <li>HTML</li>
+                    <li>SCSS</li>
+                    <li>React</li>
+                    <li>Storybook</li>
+                    <li>WordPress</li>
+                    <li>PHP</li>
+                    <li>Rest API</li>
+                    <li>jQuery</li>
+                    <li>Figma</li>
+                  </ChipList>
+                </div>
+              </DateSection>
+            </FadeIn>
+            <FadeIn>
+              <DateSection>
+                <time>2016 - 2017</time>
+                <div
+                  css={css`
+                    max-width: 600px;
+                  `}
+                >
+                  <Heading3>
+                    Frontend Engineer -{" "}
+                    <HeadingLink
+                      href="https://new.artsmia.org/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Tock 10 <LinkExternal />
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="https://exploretock.com/join/holiday-success"
+                      Minneapolis Institute of Art <LinkExternal />
+                    </HeadingLink>
+                  </Heading3>
+                  <p>
+                    Built a custom headless CMS (Wordpress) site to support all of MIA&rsquo;s
+                    content for permanent exhibits and special events.
+                  </p>
+
+                  <ChipList>
+                    <li>Javascript</li>
+                    <li>HTML</li>
+                    <li>SCSS</li>
+                    <li>React</li>
+                    <li>WordPress</li>
+                    <li>PHP</li>
+                    <li>Rest API</li>
+                  </ChipList>
+                </div>
+              </DateSection>
+            </FadeIn>
+            <FadeIn>
+              <DateSection>
+                <time>2013 - 2016</time>
+                <div
+                  css={css`
+                    max-width: 600px;
+                  `}
+                >
+                  <Heading3>Frontend Engineer - The Uprising Creative</Heading3>
+                  <p>
+                    Built microsites and interactive landing pages for clients Sonos, Gogo, and
+                    Sarofsky. Their client roster included Nike, Adidas, Anheuser-Busch, Beyonce,
+                    and Justin Timberlake.
+                  </p>
+
+                  <ChipList>
+                    <li>Javascript</li>
+                    <li>HTML</li>
+                    <li>SCSS</li>
+                    <li>React</li>
+                    <li>WordPress</li>
+                    <li>PHP</li>
+                    <li>Rest API</li>
+                  </ChipList>
+                </div>
+              </DateSection>
+            </FadeIn>
+            <FadeIn>
+              <DateSection>
+                <time>2010 - 2013</time>
+                <div
+                  css={css`
+                    max-width: 600px;
+                  `}
+                >
+                  <Heading3>
+                    Art Director -{" "}
+                    <HeadingLink
+                      href="https://www.metrochicago.com"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Holiday Success <LinkExternal />
-                    </a>
-                  </li>
-                </ul>
-                <ChipList>
-                  <li>Javascript</li>
-                  <li>TypeScript</li>
-                  <li>HTML</li>
-                  <li>Emotion CSS</li>
-                  <li>React</li>
-                  <li>Next.js</li>
-                  <li>GraphQL</li>
-                  <li>WordPress</li>
-                  <li>Node.js</li>
-                  <li>PHP</li>
-                </ChipList>
-              </div>
-            </DateSection>
-            <DateSection>
-              <time>2017 - 2021</time>
-              <div
-                css={css`
-                  max-width: 600px;
-                `}
-              >
-                <Heading3>
-                  Frontend Engineer -{" "}
-                  <HeadingLink
-                    href="https://www.walgreens.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Walgreens <LinkExternal />
-                  </HeadingLink>
-                </Heading3>
-                <p>
-                  Built and maintained Walgreens design system and brand style guide. Built a
-                  responsive global header and marketing landing pages including interaction and
-                  animation design and execution.
-                </p>
+                      Metro Chicago <LinkExternal />
+                    </HeadingLink>
+                  </Heading3>
+                  <p>
+                    Designed, developed and maintained both Metro and SmartBar music venues in
+                    Chicago. Designed for clients including The Onion, Time Out, Pitchfork,
+                    Anheuser-Busch, and Chicago Architecture Foundation. Project management for
+                    marketing and events. Designed and curated several silkscreen{" "}
+                    <Link href="/posters">gig posters</Link>.
+                  </p>
 
-                <ChipList>
-                  <li>Javascript</li>
-                  <li>HTML</li>
-                  <li>SCSS</li>
-                  <li>React</li>
-                  <li>Storybook</li>
-                  <li>WordPress</li>
-                  <li>PHP</li>
-                  <li>Rest API</li>
-                  <li>jQuery</li>
-                  <li>Figma</li>
-                </ChipList>
-              </div>
-            </DateSection>
-            <DateSection>
-              <time>2016 - 2017</time>
-              <div
-                css={css`
-                  max-width: 600px;
-                `}
-              >
-                <Heading3>
-                  Frontend Engineer -{" "}
-                  <HeadingLink
-                    href="https://new.artsmia.org/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Minneapolis Institute of Art <LinkExternal />
-                  </HeadingLink>
-                </Heading3>
-                <p>
-                  Built a custom headless CMS (Wordpress) site to support all of MIA&rsquo;s content
-                  for permanent exhibits and special events.
-                </p>
-
-                <ChipList>
-                  <li>Javascript</li>
-                  <li>HTML</li>
-                  <li>SCSS</li>
-                  <li>React</li>
-                  <li>WordPress</li>
-                  <li>PHP</li>
-                  <li>Rest API</li>
-                </ChipList>
-              </div>
-            </DateSection>
-            <DateSection>
-              <time>2013 - 2016</time>
-              <div
-                css={css`
-                  max-width: 600px;
-                `}
-              >
-                <Heading3>Frontend Engineer - The Uprising Creative</Heading3>
-                <p>
-                  Built microsites and interactive landing pages for clients Sonos, Gogo, and
-                  Sarofsky. Their client roster included Nike, Adidas, Anheuser-Busch, Beyonce, and
-                  Justin Timberlake.
-                </p>
-
-                <ChipList>
-                  <li>Javascript</li>
-                  <li>HTML</li>
-                  <li>SCSS</li>
-                  <li>React</li>
-                  <li>WordPress</li>
-                  <li>PHP</li>
-                  <li>Rest API</li>
-                </ChipList>
-              </div>
-            </DateSection>
-            <DateSection>
-              <time>2010 - 2013</time>
-              <div
-                css={css`
-                  max-width: 600px;
-                `}
-              >
-                <Heading3>
-                  Art Director -{" "}
-                  <HeadingLink
-                    href="https://www.metrochicago.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Metro Chicago <LinkExternal />
-                  </HeadingLink>
-                </Heading3>
-                <p>
-                  Designed, developed and maintained both Metro and SmartBar music venues in
-                  Chicago. Designed for clients including The Onion, Time Out, Pitchfork,
-                  Anheuser-Busch, and Chicago Architecture Foundation. Project management for
-                  marketing and events. Designed and curated several silkscreen{" "}
-                  <Link href="/posters">gig posters</Link>.
-                </p>
-
-                <ChipList>
-                  <li>Javascript</li>
-                  <li>HTML</li>
-                  <li>SCSS</li>
-                  <li>WordPress</li>
-                  <li>PHP</li>
-                  <li>Rest API</li>
-                </ChipList>
-              </div>
-            </DateSection>
+                  <ChipList>
+                    <li>Javascript</li>
+                    <li>HTML</li>
+                    <li>SCSS</li>
+                    <li>WordPress</li>
+                    <li>PHP</li>
+                    <li>Rest API</li>
+                  </ChipList>
+                </div>
+              </DateSection>
+            </FadeIn>
 
             <section
               css={css`

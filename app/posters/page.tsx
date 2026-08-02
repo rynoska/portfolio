@@ -93,7 +93,7 @@ export default function Portfolio() {
               max-width: 1200px;
               display: grid;
               grid-template-columns: repeat(12, 1fr);
-              gap: 1rem;
+              gap: 2rem;
               grid-template-columns: repeat(6, minmax(0, 1fr));
               @media (max-width: 1200px) {
                 grid-template-columns: repeat(8, minmax(0, 1fr));

@@ -112,6 +112,7 @@ export default function HeroIntro({
         <Image
           src="/images/rle-logo-cropped.svg"
           alt="Ryne Estwing logo"
+          aria-hidden="true"
           width={254}
           height={267}
           sizes="(max-width: 768px) 100vw, 254px"
@@ -120,6 +121,7 @@ export default function HeroIntro({
         <Image
           src="/images/rle-logo-cropped.svg"
           alt="Ryne Estwing logo"
+          aria-hidden="true"
           width={254}
           height={267}
           sizes="(max-width: 768px) 100vw, 254px"
@@ -128,6 +130,7 @@ export default function HeroIntro({
         <Image
           src="/images/rle-logo-cropped.svg"
           alt="Ryne Estwing logo"
+          aria-hidden="true"
           width={254}
           height={267}
           sizes="(max-width: 768px) 100vw, 254px"

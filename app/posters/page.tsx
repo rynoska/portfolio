@@ -70,7 +70,7 @@ export default function Portfolio() {
     <PageShell>
       <MainShell>
         <Container>
-          <Link href="/">
+          <Link href="/" aria-label="Go back to the homepage">
             <HeroIntro
               subtitle={false}
               compact
@@ -168,6 +168,7 @@ export default function Portfolio() {
               padding: 2rem;
             `}
             aria-modal="true"
+            aria-label="Expanded poster image"
             role="dialog"
           >
             <button
@@ -181,8 +182,8 @@ export default function Portfolio() {
                 border: 0;
                 background: rgba(255, 255, 255, 0.15);
                 color: #fff;
-                width: 2.5rem;
-                height: 2.5rem;
+                width: 2.75rem;
+                height: 2.75rem;
                 border-radius: 999px;
                 cursor: pointer;
                 font-size: 1.25rem;

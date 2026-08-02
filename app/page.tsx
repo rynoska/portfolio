@@ -14,6 +14,7 @@ import { css } from "@emotion/react";
 import { LinkExternal } from "./src/components/icons/LinkExternal";
 import HeroIntro from "./src/components/hero/HeroIntro";
 import Link from "next/link";
+import { theme } from "./src/theme/theme";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
             `}
           >
             <section
+              aria-label="About"
               css={css`
                 max-width: 600px;
                 margin-left: auto;
@@ -100,34 +102,39 @@ export default function Home() {
                   max-width: 600px;
                 `}
               >
-                <Heading3>
-                  Lead Web Developer - American Express{" "}
-                  <div
-                    css={css`
-                      margin-top: 0.5rem;
+                <Heading3
+                  css={css`
+                    margin-bottom: 0.5rem;
+                  `}
+                >
+                  Lead Web Developer - American Express
+                </Heading3>
+                <div
+                  css={css`
+                    font-family: ${theme.typography.fonts.sans};
+                    margin: 0 0 1rem;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    a {
                       display: flex;
                       align-items: center;
                       gap: 0.5rem;
-                      a {
-                        display: flex;
-                        align-items: center;
-                        gap: 0.5rem;
-                      }
-                    `}
+                    }
+                  `}
+                >
+                  <a href="https://www.resy.com/join" target="_blank" rel="noopener noreferrer">
+                    Resy <LinkExternal />
+                  </a>
+                  |{" "}
+                  <a
+                    href="https://www.exploretock.com/join"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <a href="https://www.resy.com/join" target="_blank" rel="noopener noreferrer">
-                      Resy <LinkExternal />
-                    </a>
-                    |{" "}
-                    <a
-                      href="https://www.exploretock.com/join"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Tock <LinkExternal />
-                    </a>
-                  </div>
-                </Heading3>
+                    Tock <LinkExternal />
+                  </a>
+                </div>
                 <p>
                   Build and maintain web application experiences for online reservation software
                   platforms Tock and Resy. Work closely with cross-functional teams, including

@@ -70,7 +70,13 @@ export default function Portfolio() {
     <PageShell>
       <MainShell>
         <Container>
-          <Link href="/" aria-label="Go back to the homepage">
+          <Link
+            href="/"
+            aria-label="Go back to the homepage"
+            css={css`
+              align-self: flex-start;
+            `}
+          >
             <HeroIntro
               subtitle={false}
               compact

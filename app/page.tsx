@@ -30,67 +30,72 @@ export default function Home() {
               max-width: 820px;
             `}
           >
-            <section
-              aria-label="About"
-              css={css`
-                max-width: 600px;
-                margin-left: auto;
-              `}
-            >
-              <p>
-                Hello, I&rsquo;m Ryne (pronounced like the Rhine River) and I enjoy creating digital
-                experiences. Over the past 15 years, I&rsquo;ve always had a passion for beautiful
-                design and creative engineering. Through my experience with both, I&rsquo;ve learned
-                that understanding new technologies and design systems and well-designed UX/UI
-                components really interest me and the connection between design and engineering.
-              </p>
-              <p>
-                Currently I&rsquo;m the Lead Web Developer at American Express, where I support all
-                Marketing initiatives for{" "}
-                <a
-                  href="https://www.exploretock.com/join"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Tock
-                </a>{" "}
-                and{" "}
-                <a href="https://www.resy.com/join" target="_blank" rel="noopener noreferrer">
-                  Resy
-                </a>
-                . I work on those Marketing web applications while also supporting our consumer
-                facing sites. I partner closely with designers and engineers to ensure our efforts
-                support our design system, maintain accessibility standards and create custom
-                experiences to engage with several different audiences.
-              </p>
-              <p>
-                Previously I&rsquo;ve worked at several different companies ranging from startups to
-                large companies to non-profits and music venues including{" "}
-                <a href="https://www.walgreens.com" target="_blank" rel="noopener noreferrer">
-                  Walgreens
-                </a>
-                , the{" "}
-                <a href="https://new.artsmia.org" target="_blank" rel="noopener noreferrer">
-                  Minneapolis Institute of Art
-                </a>
-                , The Uprising Creative, and{" "}
-                <a href="https://www.metrochicago.com" target="_blank" rel="noopener noreferrer">
-                  Metro Chicago
-                </a>
-                .
-              </p>
+            <FadeIn>
+              {" "}
+              <section
+                aria-label="About"
+                css={css`
+                  max-width: 600px;
+                  margin-left: auto;
+                `}
+              >
+                <p>
+                  Hello, I&rsquo;m Ryne (pronounced like the Rhine River) and I enjoy creating
+                  digital experiences. Over the past 15 years, I&rsquo;ve always had a passion for
+                  beautiful design and creative engineering. Through my experience with both,
+                  I&rsquo;ve learned that understanding new technologies and design systems and
+                  well-designed UX/UI components really interest me and the connection between
+                  design and engineering.
+                </p>
+                <p>
+                  Currently I&rsquo;m the Lead Web Developer at American Express, where I support
+                  all Marketing initiatives for{" "}
+                  <a
+                    href="https://www.exploretock.com/join"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Tock
+                  </a>{" "}
+                  and{" "}
+                  <a href="https://www.resy.com/join" target="_blank" rel="noopener noreferrer">
+                    Resy
+                  </a>
+                  . I work on those Marketing web applications while also supporting our consumer
+                  facing sites. I partner closely with designers and engineers to ensure our efforts
+                  support our design system, maintain accessibility standards and create custom
+                  experiences to engage with several different audiences.
+                </p>
+                <p>
+                  Previously I&rsquo;ve worked at several different companies ranging from startups
+                  to large companies to non-profits and music venues including{" "}
+                  <a href="https://www.walgreens.com" target="_blank" rel="noopener noreferrer">
+                    Walgreens
+                  </a>
+                  , the{" "}
+                  <a href="https://new.artsmia.org" target="_blank" rel="noopener noreferrer">
+                    Minneapolis Institute of Art
+                  </a>
+                  , The Uprising Creative, and{" "}
+                  <a href="https://www.metrochicago.com" target="_blank" rel="noopener noreferrer">
+                    Metro Chicago
+                  </a>
+                  .
+                </p>
 
-              <p>
-                In my spare time, you can usually find me recording music, still trying to land a
-                kickflip, hanging out with my wife, baby girl and Bash (our dog), or trying to
-                create the perfect cocktail. I&rsquo;m also currently working on a mobile app that
-                uses{" "}
-                <a href="https://www.discogs.com/" target="_blank" rel="noopener noreferrer">
-                  Discogs
-                </a>{" "}
-                API to create an approachable way to view vinyl collections with your friends.
-              </p>
-            </section>
+                <p>
+                  In my spare time, you can usually find me recording music, still trying to land a
+                  kickflip, hanging out with my wife, baby girl and Bash (our dog), or trying to
+                  create the perfect cocktail. I&rsquo;m also currently working on a mobile app that
+                  uses{" "}
+                  <a href="https://www.discogs.com/" target="_blank" rel="noopener noreferrer">
+                    Discogs
+                  </a>{" "}
+                  API to create an approachable way to view vinyl collections with your friends.
+                </p>
+              </section>
+            </FadeIn>
+
             <FadeIn>
               {/* Tock */}
               <DateSection

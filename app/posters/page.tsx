@@ -134,6 +134,10 @@ export default function Portfolio() {
                     setActiveImage(item);
                   }}
                   css={css`
+                    &:focus-visible {
+                      outline: 2px solid rgb(187, 245, 244);
+                      outline-offset: 2px;
+                    }
                     all: unset;
                     cursor: zoom-in;
                     display: block;
